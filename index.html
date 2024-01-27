@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titan Global Financial Holdings Limited - Leading in private equity with an innovative and forward-thinking approach.">
+    <title>Titan Global Financial Holdings Limited</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498DB;
+            --secondary-color: #2C3E50;
+            --text-color: #333;
+            --background-color: #F5F5F5;
+            --font-family: 'Roboto', sans-serif;
+        }
+
+        /* Basic Reset */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font and Color Improvements */
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            line-height: 1.6;
+            background: var(--background-color);
+            overflow-y: scroll;
+            padding-bottom: 5rem;
+	    scroll-padding-top: 120px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+	    height: 120px;
+        }
+
+        header h1 {
+            color: #ECF0F1;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: var(--primary-color);
+            padding: 0.8rem;
+        }
+
+        nav a {
+            color: #ECF0F1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--secondary-color);
+            outline: none;
+        }
+
+        /* Services Section */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background: var(--background-color);
+        }
+
+        .section {
+            width: 90%;
+            max-width: 900px;
+            background: var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+	.section::before {
+    	    content: '';
+            display: block;
+            height: 100px; /* Adjust this value to match your header's height */
+            margin-top: -100px; /* This should be the same as the height but negative */
+            visibility: hidden;
+            pointer-events: none;
+         }
+
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ECF0F1;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+	@media screen and (max-width: 768px) {
+    	   header {
+               height: 60px; /* Smaller height for smaller screens */
+           }
+
+           .section::before {
+               height: 60px; /* Adjust this value to match your smaller header's height */
+               margin-top: -60px;
+           }
+
+           nav a {
+               padding: 0.3rem 0.6rem;
+           }
+
+           .container {
+               flex-direction: column;
+           }
+        }
+    #contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+	    color: var(--primary-color);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+	    color: var(--primary-color); /* Set the text color */
+    	    background-color: #fff;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background: darken(var(--primary-color), 10%);
+        }
+    </style>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var headerHeight = document.querySelector('header').offsetHeight;
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href');
+                var targetElement = document.querySelector(targetId);
+                if (targetElement) {
+		    var additionalOffset = 35;
+                    var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+
+<body>
+    <header>
+        <h1>Titan Global Financial Holdings Limited</h1>
+        <nav aria-label="Main navigation">
+            <a href="#about-us">About Us</a>
+            <a href="#vision">Vision</a>
+            <a href="#investment-strategy">Investment Strategy</a>
+            <a href="#value-proposition">Value Proposition</a>
+            <a href="#our-directors">Our Directors</a>
+	    <a href="#contact-us">Contact Us</a>
+       </nav>
+    </header>
+
+    <main class="container">
+        <section id="about-us" class="section">
+            <h2>About Us</h2>
+            <p>Titan Global Financial Holdings Limited is a leader in private equity, strategically blending innovative technology with traditional investment practices. Our expertise lies in identifying and nurturing high-potential businesses, ensuring they achieve sustainable growth and success. Backed by a family office and supported by high-net-worth individuals and institutional investors, we combine a personal touch with entrepreneurial spirit and solid financial backing.</p>
+        </section>
+
+        <section id="vision" class="section">
+            <h2>Vision</h2>
+            <p>We aim to transform the private equity sector, championing innovation and ethical investment. Our vision is to create a future where businesses thrive through smart, technology-driven strategies, contributing positively to the economy and society.</p>
+        </section>
+
+        <section id="investment-strategy" class="section">
+            <h2>Investment Strategy</h2>
+            <p>Our investment strategy centers on creating long-term value. We focus on businesses with strong market positions, infusing them with cutting-edge technology and operational efficiencies to unlock their full potential.</p>
+        </section>
+
+        <section id="value-proposition" class="section">
+            <h2>Value Proposition</h2>
+            <p>For Business Owners: We offer a partnership that goes beyond financial investment. Expect comprehensive strategic support, innovative technological solutions, and access to a broad network, ensuring your business is primed for growth and market leadership. For Investors: Our approach guarantees robust returns, combining the latest in technology with proven investment models to minimize risk and maximize stability</p>
+        </section>
+
+        <section id="our-directors" class="section">
+            <h2>Our Directors</h2>
+            <p>Our leadership team comprises experts in finance, technology, and strategy, bringing a wealth of experience to guide our vision of innovation, ethical practices, and stakeholder alignment.</p>
+        </section>
+
+        <section id="contact-us" class="section">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+	<p>&copy; 2024 TitanGFH. All Rights Reserved.</p>
+        <p>Contact Information: info@titanglobalfh.com</p>
+        <nav aria-label="Footer navigation">
+            <!-- Add footer links here if needed -->
+        </nav>
+    </footer>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Initialize EmailJS
+            emailjs.init("ajci8FDK0qRcFjxTD"); // Replace with your EmailJS user ID
+
+            // Add event listener to the form
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Send the form data using EmailJS
+                emailjs.sendForm('service_p12xn48', 'template_r6m1vrs', this)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        // Clear the form fields
+                        document.getElementById('contact-form').reset();
+                        // Display a success message
+                        alert('Your message has been sent successfully!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        // Display an error message
+                        alert('Failed to send message. Please try again later.');
+                    });
+            });
+        };
+    </script>
+</body>
+</html>
