@@ -219,6 +219,26 @@
         font-size: 0.9rem; /* Smaller font size for the submit button */
     }
 }
+@media screen and (max-width: 480px) {
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 100%; /* Ensures the input fields take up full width */
+        margin: 0; /* Removes any default margin */
+        padding: 10px; /* Adds some padding inside the input fields */
+        font-size: 1rem; /* Adjusts the font size for better readability */
+    }
+
+    .form-group label {
+        margin-bottom: 5px; /* Adds space between the label and the input field */
+        font-size: 1rem; /* Adjusts the label font size for consistency */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Makes the button take full width */
+        font-size: 1rem; /* Adjusts the font size of the button */
+    }
+}
     </style>
 </head>
 <script>
