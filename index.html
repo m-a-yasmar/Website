@@ -244,6 +244,27 @@
         font-size: 1rem; /* Adjusts the font size of the button */
     }
 }
+
+/* Further adjustments if necessary for other specific viewports */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .form-group textarea {
+       width: 100%; /* Ensures full width */
+       padding: 10px; /* Uniform padding */
+       border: 1px solid #ccc; /* Consistent border */
+       box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+       resize: vertical; /*  /* Adjustments for small tablets */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .form-group textarea {
+       width: 100%; /* Ensures full width */
+       padding: 10px; /* Uniform padding */
+       border: 1px solid #ccc; /* Consistent border */
+       box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+       resize: vertical; /*  /* Adjustments for larger screens */
+    }
+}
     </style>
 </head>
 <script>
