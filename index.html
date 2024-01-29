@@ -157,6 +157,11 @@
 
         .form-group textarea {
             height: 100px;
+	    width: 100%; /* Ensures full width */
+	    padding: 10px; /* Uniform padding */
+	    border: 1px solid #ccc; /* Consistent border */
+	    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+	    resize: vertical; 
         }
 
         button[type="submit"] {
